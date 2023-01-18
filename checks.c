@@ -1,5 +1,6 @@
 #include "monty.h"
 glo_t glo;
+
 /**
  * argc_check - Check to see if argc == 2
  * @argc: argument counter

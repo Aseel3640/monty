@@ -40,6 +40,7 @@ typedef struct instruction_s
  * @node_data: The integer to use for data in a given node if necessary
  *  Description: Allows us to pass variables across our code
  */
+
 typedef struct glo_s
 {
 	FILE *fp;
@@ -54,10 +55,12 @@ void integer_error(unsigned int c, stack_t *head);
 void pint_error(unsigned int c);
 void pop_error(stack_t **stack, unsigned int c);
 void add_error(unsigned int c);
+
 void sub_error(unsigned int c);
 void div_error(unsigned int c);
 void mul_error(unsigned int c);
 void mod_error(unsigned int c);
+
 int get_opcode(stack_t **stack, unsigned int line_number);
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);
@@ -74,11 +77,13 @@ void op_pchar(stack_t **stack, unsigned int line_number);
 void op_pstr(stack_t **stack, unsigned int line_number);
 void op_rotl(stack_t **stack, unsigned int line_number);
 void op_rotr(stack_t **stack, unsigned int line_number);
+
 void argc_check(int argc);
 void open_check(char **argv);
 void line_check(ssize_t lines);
 void op_check(int check, unsigned int c, stack_t *head);
 void op_check_print_error(unsigned int c);
+
 void free_buff(void);
 void free_stack(stack_t *head);
 #endif
