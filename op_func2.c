@@ -101,6 +101,6 @@ void op_mul(stack_t **stack, unsigned int line_number)
 		mul_error(line_number);
 
 	second_node = current->next;
-	econd_node->n = second_node->n * current->n;
+	second_node->n = second_node->n * current->n;
 	op_pop(stack, line_number);
 }
